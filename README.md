@@ -4,7 +4,11 @@ This is a submission in the [Udacity C++ Nanodegree Program](https://www.udacity
 
 Starter code was provided by Udacity.
 
-<img src="snake_game.gif"/>
+My Approach: I tried to let the provided code to stay at it is as much as possible. I added to integral features:
+ - Mines are placed in the grid (red squares). The snake dies if it hits one of the mines and the game is over.
+ - A highscore is persisted in a local file. Highscore is updated if the player finishes the game with a new highscore.
+
+<img src="snake_with_mines.png"/>
 
 The Capstone Project gives you a chance to integrate what you've learned throughout this program. This project will become an important part of your portfolio to share with current and future colleagues and employers.
 
