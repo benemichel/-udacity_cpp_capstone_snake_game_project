@@ -48,23 +48,23 @@ In this project, you can build your own C++ application or extend this Snake gam
 
 
 ### Object Oriented Programming
-1. The project uses Object Oriented Programming techniques.
+✔️ 1. The project uses Object Oriented Programming techniques.
   - Used provided classes and created HighScore class. 
-2. Classes use appropriate access specifiers for class members.
+✔️ 2. Classes use appropriate access specifiers for class members.
   - Used provided classes and created HighScore class, all members of additonally created classes provide explicit access specifiers. (e.g. _highScore as private member),
-3. Class constructors utilize member initialization lists. 
+✔️ 3. Class constructors utilize member initialization lists. 
   - See highscore.h
-4. Classes abstract implementation details from their interfaces.
+✔️ 4. Classes abstract implementation details from their interfaces.
   - Used minimal interfaces and encapsulation. All functions document their effects through clear and speaking function names.
-5. Classes encapsulate behavior.
+✔️ 5. Classes encapsulate behavior.
   - see 4.
 
 ### Memory Management
-1. The project makes use of references in function declarations.
+✔️ 1. The project makes use of references in function declarations.
   - e.g. Renderer::Render(... SDL_Point const &food ...)
 
 ### Concurrency
-Concurrency was not used. This is a simple program. A good approach to software engineering is avoiding over-engineering by using more complex techniques only were applicable and favorable.
+✔️ 1. Concurrency was not used. This is a simple program. A good approach to software engineering is avoiding over-engineering by using more complex techniques only were applicable and favorable. Understanding of concurreny was shown in the previous project "Concurrent Traffic Simulation".
 
 
 ## CC Attribution-ShareAlike 4.0 International
