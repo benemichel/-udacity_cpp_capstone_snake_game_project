@@ -1,6 +1,8 @@
 # CPPND: Capstone Snake Game Example
 
-This is a starter repo for the Capstone project in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+This is a submission in the [Udacity C++ Nanodegree Program](https://www.udacity.com/course/c-plus-plus-nanodegree--nd213). The code for this repo was inspired by [this](https://codereview.stackexchange.com/questions/212296/snake-game-in-c-with-sdl) excellent StackOverflow post and set of responses.
+
+Starter code was provided by Udacity.
 
 <img src="snake_game.gif"/>
 
@@ -29,6 +31,36 @@ In this project, you can build your own C++ application or extend this Snake gam
 2. Make a build directory in the top level directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make`
 4. Run it: `./SnakeGame`.
+
+## Rubric Points Covered
+
+### Loops, Functions, I/O
+1. The project demonstrates an understanding of C++ functions and control structures. 
+  - uses multiple loops, conditionals etc. as well as basic I/O, programm is clearly organized into functions (Game::PlaceMines)
+2. The project reads data from a file and process the data, or the program writes data to a file. 
+  - Program uses a fiel to store the highscore. Data is read at each beginning of a game and written after it has stopped. (See highscore.cpp)
+3. The project accepts user input and processes the input.
+  - Program uses keyboard direction keys for steering the snake. 
+
+
+### Object Oriented Programming
+1. The project uses Object Oriented Programming techniques.
+  - Used provided classes and created HighScore class. 
+2. Classes use appropriate access specifiers for class members.
+  - Used provided classes and created HighScore class, all members of additonally created classes provide explicit access specifiers. (e.g. _highScore as private member),
+3. Class constructors utilize member initialization lists. 
+  - See highscore.h
+4. Classes abstract implementation details from their interfaces.
+  - Used minimal interfaces and encapsulation. All functions document their effects through clear and speaking function names.
+5. Classes encapsulate behavior.
+  - see 4.
+
+### Memory Management
+1. The project makes use of references in function declarations.
+  - e.g. Renderer::Render(... SDL_Point const &food ...)
+
+### Concurrency
+Concurrency was not used. This is a simple program. A good approach to software engineering is avoiding over-engineering by using more complex techniques only were applicable and favorable.
 
 
 ## CC Attribution-ShareAlike 4.0 International
