@@ -6,18 +6,16 @@
 
 class HighScore {
     public:
-        HighScore(): _filepath("./highscore.txt") {
+        HighScore(): _filepath("../highscoretable.txt") {
             std::cout << "construct HighScore";
         }
         int ReadHighScore();
-        int GetHighScore();
-        void WriteHighScore(int score);
+        int GetHighScore() const;
+        void WriteHighScore(int score) const;
     
     private:
         std::string _filepath;
         int _highScore;
 };
-
-
 
 #endif

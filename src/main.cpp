@@ -16,12 +16,16 @@ int main() {
   Controller controller;
   Game game(kGridWidth, kGridHeight);
   
-  // HighScore highScore;
-  // highScore.ReadHighScore();
+  HighScore highScore;
+  highScore.ReadHighScore();
+
   
-  game.Run(controller, renderer, kMsPerFrame);
+  game.Run(controller, renderer, kMsPerFrame, highScore.GetHighScore());
   std::cout << "Game has terminated successfully!\n";
   std::cout << "Score: " << game.GetScore() << "\n";
   std::cout << "Size: " << game.GetSize() << "\n";
+
+  highScore.WriteHighScore(game.GetScore());
+  
   return 0;
 }

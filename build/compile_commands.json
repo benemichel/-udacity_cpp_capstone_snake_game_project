@@ -23,5 +23,10 @@
   "directory": "/home/benedikt/coding/projects/udacity_cxx/snake_original/CppND-Capstone-Snake-Game/build",
   "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/benedikt/coding/projects/udacity_cxx/snake_original/CppND-Capstone-Snake-Game/src  -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/snake.cpp.o -c /home/benedikt/coding/projects/udacity_cxx/snake_original/CppND-Capstone-Snake-Game/src/snake.cpp",
   "file": "/home/benedikt/coding/projects/udacity_cxx/snake_original/CppND-Capstone-Snake-Game/src/snake.cpp"
+},
+{
+  "directory": "/home/benedikt/coding/projects/udacity_cxx/snake_original/CppND-Capstone-Snake-Game/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/usr/include/SDL2 -I/home/benedikt/coding/projects/udacity_cxx/snake_original/CppND-Capstone-Snake-Game/src  -g   -std=c++17 -std=gnu++17 -o CMakeFiles/SnakeGame.dir/src/highscore.cpp.o -c /home/benedikt/coding/projects/udacity_cxx/snake_original/CppND-Capstone-Snake-Game/src/highscore.cpp",
+  "file": "/home/benedikt/coding/projects/udacity_cxx/snake_original/CppND-Capstone-Snake-Game/src/highscore.cpp"
 }
 ]
