@@ -7,6 +7,8 @@ Game::Game(std::size_t grid_width, std::size_t grid_height)
       engine(dev()),
       random_w(0, static_cast<int>(grid_width - 1)),
       random_h(0, static_cast<int>(grid_height - 1)) {
+  
+  PlaceMines();
   PlaceFood();
 }
 
@@ -25,7 +27,7 @@ void Game::Run(Controller const &controller, Renderer &renderer,
     // Input, Update, Render - the main game loop.
     controller.HandleInput(running, snake);
     Update();
-    renderer.Render(snake, food);
+    renderer.Render(snake, food, mines);
 
     frame_end = SDL_GetTicks();
 
@@ -65,6 +67,28 @@ void Game::PlaceFood() {
   }
 }
 
+void Game::PlaceMines() {
+  int x, y;
+  int nMines = 5;
+
+  for (int i = 0; i < nMines; i++) {
+    
+    SDL_Point mine;
+    // check if occupied by food or snake
+    while (true) {
+        x = random_w(engine);
+        y = random_h(engine);
+
+        if (!snake.SnakeCell(x, y)) {
+            mine.x = x;
+            mine.y = y;
+            mines.push_back(mine);
+            break;
+        }
+    }
+  }
+}
+
 void Game::Update() {
   if (!snake.alive) return;
 
@@ -80,6 +104,13 @@ void Game::Update() {
     // Grow snake and increase speed.
     snake.GrowBody();
     snake.speed += 0.02;
+  }
+
+  // Check if there's a mine over here
+  for (SDL_Point const mine : mines) {
+    if (mine.x == new_x && mine.y == new_y) {
+     snake.alive = false;
+    }
   }
 }
 
